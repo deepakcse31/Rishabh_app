@@ -29,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnnext=findViewById(R.id.btnnext);
         edtname=findViewById(R.id.edtname);
+        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        String loginstatus = sh.getString("loginstatus", "");
+        if (loginstatus.equals("true"))
+        {
+            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+            startActivity(intent);
+        }
+        else {
+            Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
+
         btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

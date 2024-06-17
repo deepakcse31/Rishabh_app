@@ -7,18 +7,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+<!--  <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--      android:id="@+id/shimmer_view_container"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      app:layout_constraintTop_toTopOf="parent"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      android:layout_centerInParent="true">-->
 
-  <TextView
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical">-->
+
+<!--      &lt;!&ndash;Image&ndash;&gt;-->
+<!--      <ImageView-->
+<!--          android:layout_width="150dp"-->
+<!--          android:layout_height="150dp"-->
+<!--          android:src="@drawable/ic_baseline_account_balance_24" />-->
+
+<!--      &lt;!&ndash;Text given to Image&ndash;&gt;-->
+<!--      <TextView-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_marginTop="35dp"-->
+<!--          android:text="Bank"-->
+<!--          android:textColor="@color/purple_200"-->
+<!--          android:textSize="24dp"-->
+<!--          android:textStyle="bold" />-->
+
+<!--    </LinearLayout>-->
+
+<!--  </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+  <EditText
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintBottom_toBottomOf="parent"
-      android:textSize="25dp"
-      android:text="Login Page"
-      android:gravity="center"
-      android:background="@color/ornage"
-      android:id="@+id/tvname"
+      android:id="@+id/edtusename"
+      android:hint="Enter User Name"
+      android:layout_marginHorizontal="20dp"
+      android:inputType="text"
       />
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@+id/edtusename"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:id="@+id/edtpassword"
+      android:hint="Enter Password"
+      android:inputType="textPassword"
+      android:layout_marginHorizontal="20dp"
+      />
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@+id/edtpassword"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:id="@+id/btnlogin"
+      android:text="Login"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginTop="30dp"
+      />
+<!--  <TextView-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      app:layout_constraintTop_toTopOf="parent"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintBottom_toBottomOf="parent"-->
+<!--      android:textSize="25dp"-->
+<!--      android:text="Login Page"-->
+<!--      android:gravity="center"-->
+<!--      android:background="@color/ornage"-->
+<!--      android:id="@+id/tvname"-->
+<!--      />-->
   </androidx.constraintlayout.widget.ConstraintLayout>
