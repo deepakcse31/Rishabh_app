@@ -3,6 +3,7 @@ package com.example.rishabh_app;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,11 @@ public class HomeActivity extends AppCompatActivity {
         btnpopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CustomBottomSheet bottomSheetFragment = new CustomBottomSheet();
-                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
+                Intent intent=new Intent(HomeActivity.this,RecyclerListComponent.class);
+                startActivity(intent);
+
+  //              CustomBottomSheet bottomSheetFragment = new CustomBottomSheet();
+//                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
 
 
 //                dialog.setContentView(R.layout.custom_pop_up);
