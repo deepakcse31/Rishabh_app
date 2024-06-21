@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.bumptech.glide.Glide;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 public class HomeActivity extends AppCompatActivity {
@@ -26,6 +28,8 @@ public class HomeActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefreshLayout;
     TextView tvswipe;
     ShimmerFrameLayout shimmerFrameLayout;
+
+    ImageView ivdownload;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +37,19 @@ public class HomeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
         btnpopup=findViewById(R.id.btnpopup);
+        ivdownload=findViewById(R.id.ivdown);
+        Glide.with(this)
+                .load("https://taskmotech1b.s3.ap-south-1.amazonaws.com/refer_and_earn_banner%20%281%29.png1675927170668_refer_and_earn_banner%20%281%29.png")
+                .into(ivdownload);
+
+
+
         Dialog dialog = new Dialog(HomeActivity.this);
 
         btnpopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,RecyclerListComponent.class);
+                Intent intent=new Intent(HomeActivity.this,FragmentActivity.class);
                 startActivity(intent);
 
   //              CustomBottomSheet bottomSheetFragment = new CustomBottomSheet();

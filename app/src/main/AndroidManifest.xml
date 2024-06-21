@@ -16,6 +16,12 @@
         android:theme="@style/Theme.Rishabh_app"
         tools:targetApi="31">
         <activity
+            android:name=".ServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerviewHorizontal"
             android:exported="false" />
         <activity
