@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         btnpopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,BroadcastReciverActivity.class);
+                Intent intent=new Intent(HomeActivity.this,ShareMedia.class);
                 startActivity(intent);
 
   //              CustomBottomSheet bottomSheetFragment = new CustomBottomSheet();
